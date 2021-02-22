@@ -12,4 +12,3 @@ locals {
     cd build/cloudfront-auth-master && node build/build.js --AUTH_VENDOR='${var.auth_vendor}' --CLOUDFRONT_DISTRIBUTION='${var.cloudfront_distribution}' --CLIENT_ID='${var.client_id}' --CLIENT_SECRET='${var.client_secret}' --REDIRECT_URI='${var.redirect_uri}' --SESSION_DURATION='${var.session_duration}' --AUTHZ=${format("%q", var.authz)}
     EOT
 }
-

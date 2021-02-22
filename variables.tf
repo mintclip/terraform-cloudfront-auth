@@ -60,11 +60,6 @@ variable "tags" {
   description = "Tags to label resources with (e.g map('dev', 'prod'))"
 }
 
-variable "region" {
-  type        = string
-  description = "The region to deploy the S3 bucket into"
-}
-
 variable "cloudfront_aliases" {
   type        = list(string)
   default     = []
@@ -91,4 +86,10 @@ variable "cloudfront_default_root_object" {
 variable "cloudfront_acm_certificate_arn" {
   description = "ACM Certificate ARN for Cloudfront"
   default     = null
+}
+
+variable "environment" {}
+variable "name" {
+  description = "Name to be used on all the resources as identifier"
+  default     = ""
 }

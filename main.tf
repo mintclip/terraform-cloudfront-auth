@@ -63,7 +63,7 @@ data "local_file" "build-js" {
   filename = "${path.module}/build.js"
 }
 
-#
+
 # S3
 #
 resource "aws_s3_bucket" "default" {
@@ -76,7 +76,6 @@ resource "aws_s3_bucket" "default" {
 resource "aws_s3_bucket_public_access_block" "default" {
   bucket = aws_s3_bucket.default.id
 
-  block_public_acls       = true
   block_public_policy     = true
   restrict_public_buckets = true
 }
@@ -241,7 +240,7 @@ resource "aws_lambda_function" "default" {
   runtime          = "nodejs12.x"
   role             = aws_iam_role.lambda_role.arn
   filename         = local.lambda_filename
-  function_name    = "cloudfront_auth"
+  function_name    = "${var.name}-cloudfront_auth"
   handler          = "index.handler"
   publish          = true
   timeout          = 5
@@ -272,8 +271,10 @@ data "aws_iam_policy_document" "lambda_assume_role" {
 }
 
 resource "aws_iam_role" "lambda_role" {
-  name               = "lambda_role"
+  name               = "${var.name}-lambda_role"
   assume_role_policy = data.aws_iam_policy_document.lambda_assume_role.json
+
+  tags = var.tags
 }
 
 # Attach the logging access document to the above role.
@@ -284,6 +285,6 @@ resource "aws_iam_role_policy_attachment" "lambda_log_access" {
 
 # Create an IAM policy that will be attached to the role
 resource "aws_iam_policy" "lambda_log_access" {
-  name   = "cloudfront_auth_lambda_log_access"
+  name   = "${var.name}-cloudfront_auth_lambda_log_access"
   policy = data.aws_iam_policy_document.lambda_log_access.json
 }
