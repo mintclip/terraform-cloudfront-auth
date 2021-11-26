@@ -22,6 +22,10 @@ authentication. Based on [Widen - Cloudfront Auth](https://github.com/Widen/clou
 ![Example](/docs/code.png)
 *Example using GitHub authentication*
 
+## 주의: lambda.zip 파일을 얻는 법
+
+1. 사용전 [Widen - Cloudfront Auth](https://github.com/Widen/cloudfront-auth/)을 받은 후, 해당 directory에서 `./build.sh` 실행해서 .zip 파일을 얻어야한다.
+2. 이 후 해당 .zip 파일 이름은 lambda.zip 으로 변경 후 본 terraform 실행 directory에 넣어준다.
 
 ## Introduction
 
@@ -215,24 +219,24 @@ Check out [our other projects][github], [follow us on twitter][twitter], or [hir
 |  [![Tim Bannister][sftim_avatar]][sftim_homepage]<br/>[Tim Bannister][sftim_homepage] |
 |---|
 
-  [steveporter92_homepage]: https://github.com/steveporter92
-  [steveporter92_avatar]: https://github.com/steveporter92.png?size=150
-  [sftim_homepage]: https://github.com/sftim
-  [sftim_avatar]: https://github.com/sftim.png?size=150
+[steveporter92_homepage]: https://github.com/steveporter92
+[steveporter92_avatar]: https://github.com/steveporter92.png?size=150
+[sftim_homepage]: https://github.com/sftim
+[sftim_avatar]: https://github.com/sftim.png?size=150
 
 
 
 
-  [logo]: https://academy.scalefactory.com/images/logo.svg
-  [website]: https://scalefactory.com
-  [github]: https://github.com/scalefactory
-  [services]: https://www.scalefactory.com/services
-  [aws]: https://aws.amazon.com/
-  [linkedin]: https://www.linkedin.com/company/the-scale-factory
-  [twitter]: https://twitter.com/scalefactory
-  [email]: https://www.scalefactory.com/contact-us
-  [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-cloudfront-auth&url=https://github.com/scalefactory/terraform-cloudfront-auth
-  [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-cloudfront-auth&url=https://github.com/scalefactory/terraform-cloudfront-auth
-  [share_reddit]: https://reddit.com/submit/?url=https://github.com/scalefactory/terraform-cloudfront-auth
-  [share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/scalefactory/terraform-cloudfront-auth
-  [share_email]: mailto:?subject=terraform-cloudfront-auth&body=https://github.com/scalefactory/terraform-cloudfront-auth
+[logo]: https://academy.scalefactory.com/images/logo.svg
+[website]: https://scalefactory.com
+[github]: https://github.com/scalefactory
+[services]: https://www.scalefactory.com/services
+[aws]: https://aws.amazon.com/
+[linkedin]: https://www.linkedin.com/company/the-scale-factory
+[twitter]: https://twitter.com/scalefactory
+[email]: https://www.scalefactory.com/contact-us
+[share_twitter]: https://twitter.com/intent/tweet/?text=terraform-cloudfront-auth&url=https://github.com/scalefactory/terraform-cloudfront-auth
+[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-cloudfront-auth&url=https://github.com/scalefactory/terraform-cloudfront-auth
+[share_reddit]: https://reddit.com/submit/?url=https://github.com/scalefactory/terraform-cloudfront-auth
+[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/scalefactory/terraform-cloudfront-auth
+[share_email]: mailto:?subject=terraform-cloudfront-auth&body=https://github.com/scalefactory/terraform-cloudfront-auth
