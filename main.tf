@@ -229,7 +229,7 @@ resource "aws_lambda_function" "default" {
   provider = aws.us-east-1
 
   description      = "Managed by Terraform"
-  runtime          = "nodejs12.x"
+  runtime          = "nodejs16.x"
   role             = aws_iam_role.lambda_role.arn
   filename         = local.lambda_filename
   function_name    = "${var.name}-cloudfront_auth"
